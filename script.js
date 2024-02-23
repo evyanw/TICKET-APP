@@ -3,8 +3,11 @@ alert("Aplikasi Tiket")
 const nama = prompt("Masukkan Namanya ");
 const umur = prompt("Masukkan Umurnya ");
 
-if(umur >= 13){
-    const studio = prompt("pilih studio \n A : Studio A \n B : Studio B \n C : Studio C");
+if (umur <= 0 || isNaN(umur)) {
+    alert("Umur tidak valid");
+} else {
+    if (umur >= 13) {
+        const studio = prompt("pilih studio \n A : Studio A \n B : Studio B \n C : Studio C");
 
     if (studio === 'A'){
         alert(`Tiket untuk ${nama}, di Studio A, umur : ${umur}`);
@@ -25,4 +28,5 @@ if(umur >= 13){
     else{
         alert(`Tiket untuk ${nama} dengan umur : ${umur} Tidak Tersedia, ${nama} Tidak diperbolehkan masuk studio`);
     }
+}
 
